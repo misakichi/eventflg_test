@@ -10,3 +10,8 @@ epool以外ではCPU負荷が高く、epoll, poolは処理に時間がかかり�
 
 結果はそのうち貼ります。  
 
+#テスト環境
+Ryzen7 5800X  
+Windows10 Pro 21H1  
+WSL2 + Ubuntu LTS20.04  
+
