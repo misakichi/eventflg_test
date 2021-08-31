@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/.vs/epoll_event/v16
+/obj
+/build

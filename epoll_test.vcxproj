@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="atomic_spinlock.h" />
+    <ClInclude Include="evt_cv.h" />
     <ClInclude Include="evt_epoll.h" />
     <ClInclude Include="evt_poll.h" />
   </ItemGroup>

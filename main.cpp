@@ -7,6 +7,7 @@
 #include "atomic_spinlock.h"
 #include "evt_epoll.h"
 #include "evt_poll.h"
+#include "evt_cv.h"
 
 template<class TestClass>
 void test_job(std::atomic_int& threadRunCount, std::atomic_int& runCounter,TestClass& signal, TestClass& returnSignal, volatile bool& running, unsigned int index)
@@ -79,6 +80,7 @@ int main()
     constexpr unsigned testCount = 100000;
     test_job<EventEPoll>(testCount, "epoll");
     test_job<EventPoll>(testCount, "poll");
+    test_job<EventConditionalVariable>(testCount, "ConditionalVariable");
     test_job<VolatileSpinLock>(testCount, "volatile spinlock");
     test_job<AtomicSpinLock>(testCount, "atomic spinlock");
 
