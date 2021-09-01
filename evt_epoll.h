@@ -20,9 +20,8 @@ public:
 
 
         ep_ = epoll_create(1);
-        struct epoll_event event;
+        struct epoll_event event = {};
         event.events = EPOLLIN | EPOLLPRI;
-        event.data.fd = evt_;
         auto ret = epoll_ctl(ep_, EPOLL_CTL_ADD, evt_, &event);
         assert(ret >= 0);
     }
